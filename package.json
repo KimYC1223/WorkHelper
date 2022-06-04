@@ -1,0 +1,27 @@
+{
+  "name": "workhelper",
+  "version": "1.0.0",
+  "description": "금액, 퍼센트 환산 도구",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KimYC1223/WorkHelper.git"
+  },
+  "author": "KimYC1223",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KimYC1223/WorkHelper/issues"
+  },
+  "homepage": "https://github.com/KimYC1223/WorkHelper#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^3.1.8",
+    "epxress": "^0.0.1-security",
+    "express": "^4.18.1",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security"
+  }
+}

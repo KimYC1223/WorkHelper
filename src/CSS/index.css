@@ -1,0 +1,62 @@
+.mainDiv {
+  width: 380px;
+  height: 510px;
+  border-radius: 12px;
+  padding: 10px;
+  border: solid 1px #e2e2e2;
+  display: block;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  left:50%;
+  top:45%;
+  text-align: center;
+  align-items: center;
+}
+
+.mainTitle {
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: 800;
+  display: block;
+  margin-top: 20px;
+}
+
+.subTitle {
+  color:rgb(139, 139, 139);
+  margin-bottom: 30px;
+  display: block;
+}
+
+table .clickable {
+  background: rgb(255,255,255);
+  transition: 0.2s;
+  width: 120px;
+  height: 120px;
+  cursor:pointer;
+}
+
+table .clickable:hover {
+  background: rgb(240,240,240);
+}
+
+table i {
+  font-size: 50px;
+  height: 80px;
+  line-height: 80px !important;
+  color:rgb(19, 53, 82);
+}
+
+.clickable-icon-name {
+  display: block;
+  font
+}
+
+table .none-clickable {
+  width: 120px;
+  height: 120px;
+  cursor: not-allowed;
+}
+
+.noclick {
+  color:rgb(200,200,200) !important;
+}
