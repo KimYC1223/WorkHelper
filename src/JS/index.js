@@ -19,9 +19,9 @@ item_2.addEventListener('click', () => {
 })
 
 item_3.addEventListener('click', () => {
-  location.href='/get_korean'
+  location.href='/from_number'
 })
 
 item_4.addEventListener('click', () => {
-  location.href='/get_offset'
+  location.href='/from_korean'
 })

@@ -1,7 +1,7 @@
 .Header {
   width: 100%;
   display: block;
-  position: absolute;
+  position: fixed;
   top:0;
   width: 100%;
 
@@ -16,7 +16,7 @@
   margin-left: 20px;
 }
 
-.highlight {color:rgb(0, 126, 230);}
+.highlight {color:rgb(0, 126, 230) !important;}
 
 .menu_button {
   margin-right: 30px;
@@ -25,17 +25,22 @@
   cursor:pointer;
 }
 
-.menu_button i       {color:rgb(57, 57, 57); transition: 0.3s;}
-.menu_button i:hover {color:rgb(0,126,230);}
+.menu_button i       {color:rgb(57, 57, 57);}
 
 .dropped_Down {
-  position: relative;
+  position: fixed;
   top:70px;
   width: 100%;
-  height: calc(calc(100vw / 9) + 10px);
-  background-color: white;
+  height: 0;
+  transition: 0.6s;
+  background-color: rgba(255, 255, 255, 0.85);
+  z-index: 10;
   overflow-y: hidden;
   border-bottom: 1px solid rgb(240,240,240);
+}
+
+.dropped_Down_show {
+  height: calc(calc(100vw / 9) + 10px);
 }
 
 .itemBox i {
@@ -59,6 +64,10 @@
   float:left;
 }
 
+.noclick{
+  color:rgb(163, 163, 163) !important;
+}
+
 .clickable-icon-name {
   display: block;
 }
@@ -66,11 +75,11 @@
 .clickable {
   cursor:pointer;
   transition: 0.2s;
-  background-color: white;
+  background: rgba(255,255,255,0);
 }
 
 .clickable:hover {
-  background: rgb(240,240,240);
+  background: rgba(240,240,240,0.6);
 }
 
 .centerDiv {
@@ -80,8 +89,12 @@
   position: relative;
 }
 
+.HeaderIcon {
+  cursor: pointer;
+}
+
 @media (max-width:1080px) {
-  .dropped_Down {
+  .dropped_Down_show {
     height: calc(calc(calc(100vw / 5) * 2) + 10px);
   }
 
@@ -92,6 +105,10 @@
 
 @media (max-width:768px) {
   .dropped_Down {
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  .dropped_Down_show {
     height: calc(calc(calc(100vw / 3) * 3) + 10px);
   }
 
