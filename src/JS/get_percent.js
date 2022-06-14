@@ -26,3 +26,11 @@ copyButton.addEventListener('click', () => {
   resultText.select()
   document.execCommand('copy')
 })
+
+copyButton.addEventListener('touchstart', () => {
+  copyButton.classList.add('fake-active');
+})
+
+copyButton.addEventListener('touchend', () => {
+  copyButton.classList.remove('fake-active');
+})

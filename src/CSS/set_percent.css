@@ -86,6 +86,15 @@ input[type=number] {
   background-color: rgb(0, 126, 230);
   color:white;
   border-radius: 10px;
+  transition: 0.1s;
+}
+
+.fake-active{
+  background-color: rgb(0, 61, 112);
+}
+
+.copyButton:hover{
+  background-color: rgb(0, 61, 112);
 }
 
 .copyButton i {color:white; font-size: 20px;margin-right: 20px;}

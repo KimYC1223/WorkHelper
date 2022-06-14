@@ -7,5 +7,80 @@
     </div>
   </div>
 
+  <table class="input_table">
+    <tr>
+      <td width="75%"><span class="highlight">전체</span><span class="dehighlight">콤마(,) 없이 입력</span></td><td width="20%">단위</td>
+    </tr>
+    <tr class="inputTr">
+      <td><input class="input_num" type="text" id="total_num" onchange="calcResult()"></td>
+      <td>
+        <select class="num_multiple" id="total_num_multiple">
+          <option value="1" slected> </option>
+          <option value="10">십</option>
+          <option value="100">백</option>
+          <option value="1000">천</option>
+          <option value="10000">만</option>
+          <option value="100000">십만</option>
+          <option value="1000000">백만</option>
+          <option value="10000000">천만</option>
+          <option value="100000000">억</option>
+          <option value="1000000000">십억</option>
+          <option value="10000000000">백억</option>
+          <option value="100000000000">천억</option>
+          <option value="1000000000000">조</option>
+          <option value="10000000000000">십조</option>
+          <option value="100000000000000">백조</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+
+  <div class="result">
+    <table class="input_table2">
+      <tr>
+        <td width="80%"><span class="highlight">결과</span><span class="dehighlight hidden" id="roundText">소숫점 첫째짜리에서 반올림 함</span></td><td width="20%">단위</td>
+      </tr>
+      <tr class="inputTr">
+        <td><input class="result_num" type="text" id="result_num" value="0" readonly/></td>
+        <td>
+          <select class="result_multiple" id="result_num_multiple">
+            <option value="1" slected> </option>
+            <option value="10">십</option>
+            <option value="100">백</option>
+            <option value="1000">천</option>
+            <option value="10000">만</option>
+            <option value="100000">십만</option>
+            <option value="1000000">백만</option>
+            <option value="10000000">천만</option>
+            <option value="100000000">억</option>
+            <option value="1000000000">십억</option>
+            <option value="10000000000">백억</option>
+            <option value="100000000000">천억</option>
+            <option value="1000000000000">조</option>
+            <option value="10000000000000">십조</option>
+            <option value="100000000000000">백조</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+
+    <div class="resultTypeSelect">
+      <input TYPE='radio' id='r1' name='group1' value='number'/>
+      <label for='r1'>숫자</label>
+      <input TYPE='radio' id='r2' name='group1' value='mix'   checked='checked'/>
+      <label for='r2'>숫자+한글</label>
+      <input TYPE='radio' id='r3' name='group1' value='mix2' />
+      <label for='r3'>숫자+한글2</label>
+      <input TYPE='radio' id='r4' name='group1' value='korean' />
+      <label for='r4'>한글</label>
+    </div>
+    <div class="resultTypeSelect">
+      <input TYPE='checkbox' id='c1' checked='checked'/>
+      <label for='c1'><span class="dehighlight2">3자리수 마다 콤마(,) 표시</span></label>
+    </div>
+
+    <div class="copyButton" id="copyButton"><i class="fa-solid fa-clipboard"></i> 클립보드에 복사</div>
+  </div>
+
   <script language="javascript" src="../JS/from_korean.js"></script>
 </div>
