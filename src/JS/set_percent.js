@@ -47,7 +47,7 @@ let printText = () => {
           str = str.split('.')
           result_num.value = str[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',') + '.' +  str[1]
         }
-        else result_num.value = result_value.replace(/\B(?=(\d{3})+(?!\d))/g, ',') + '.' +  str[1]
+        else result_num.value = result_value
       } else {
         result_num.value = result_value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
       }
