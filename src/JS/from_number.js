@@ -39,8 +39,19 @@ let printText = () => {
 
   if(radioValue == 'number') {
     roundText.classList.add('hidden')
-    if(isComma) result_num.value = result_value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-    else        result_num.value = result_value
+    if(isComma) {
+      if(radioValue == 'number') {
+        if(isFloat(result_value)) {
+          var str = result_value.toString()
+          str = str.split('.')
+          result_num.value = str[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',') + '.' +  str[1]
+        }
+        else result_num.value = result_value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      } else {
+        result_num.value = result_value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      }
+    }
+    else result_num.value = result_value
   } else {
     if(tooSmall) {
       roundText.classList.add('hidden')
